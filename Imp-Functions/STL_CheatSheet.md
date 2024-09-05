@@ -24,6 +24,14 @@ int sum = std::accumulate(nums.begin(), nums.end(), 0);
 cout << "Sum: " << sum << std::endl;  // Output: Sum: 15
 ```
 
+### Overflow Consideration
+
+When working with large ranges or values, using `std::accumulate` with an `int` as the initial value can lead to overflow. This is because the sum is calculated using the type of the initial value.
+
+```c++
+long long sum = std::accumulate(nums.begin(), nums.end(), 0LL);
+```
+
 2\. `max` and `min`
 -------------------
 
