@@ -209,3 +209,42 @@ auto ub = std::upper_bound(nums.begin(), nums.end(), 2);
 std::cout << "Lower bound of 2: " << (lb - nums.begin()) << std::endl;  // Output: 1
 std::cout << "Upper bound of 2: " << (ub - nums.begin()) << std::endl;  // Output: 3
 ```
+
+11\. `move'
+
+```c++
+/*
+    To efficiently transfer the resources from source to target.
+    By efficient, I mean no usage of extra space and time for creating copy.
+*/
+Examples :
+    string source = "TIM";
+    string target = "";
+    target = std::move(source);
+    cout << " source = " << source << endl;
+    cout << "target = "  << target << endl;
+    /*
+        output :
+        source = 
+        target = "TIM"
+    */
+    
+    vector<string> v;
+    string str = "example";
+    v.push_back(std::move(str));
+    /*
+    After this, str becomes empty i.e. ""
+    And while moving str inside v, no extra copy of str was done implicitly.
+    */
+
+    vector<int> temp{1, 2, 3};
+    vector<vector<int>> result;
+    result.push_back(std::move(temp));
+    /*
+    This allows no copy of "temp" being created.
+    It ensures that the contents of "temp"
+    will be moved into the "result".  This is less
+    expensive, also means temp will now be empty.
+    */
+```
+
