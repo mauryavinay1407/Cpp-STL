@@ -210,7 +210,8 @@ std::cout << "Lower bound of 2: " << (lb - nums.begin()) << std::endl;  // Outpu
 std::cout << "Upper bound of 2: " << (ub - nums.begin()) << std::endl;  // Output: 3
 ```
 
-11\. `move'
+11\. `move`
+-----------
 
 ```c++
 /*
