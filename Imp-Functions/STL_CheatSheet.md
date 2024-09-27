@@ -249,3 +249,35 @@ Examples :
     */
 ```
 
+12\. `std::distance`
+
+---------------------------------------------
+
+These functions help find the iterator to the maximum or minimum element in a container. You can then use `std::distance` to calculate the index of these elements.
+
+#### Syntax
+
+```c++
+ForwardIterator std::max_element(ForwardIterator first, ForwardIterator last);
+ForwardIterator std::min_element(ForwardIterator first, ForwardIterator last);
+template <class InputIterator>
+typename iterator_traits<InputIterator>::difference_type std::distance(InputIterator first, InputIterator last);`
+```
+#### Example
+
+```c++
+int main() {
+    std::vector<int> nums = {3, 2, 1, 6, 0, 5};
+
+    // Find index of the maximum element
+    auto maxIt = std::max_element(nums.begin(), nums.end());
+    int maxIndex = std::distance(nums.begin(), maxIt);
+
+    // Find index of the minimum element
+    auto minIt = std::min_element(nums.begin(), nums.end());
+    int minIndex = std::distance(nums.begin(), minIt);
+
+    std::cout << "Max element index: " << maxIndex << "\n";  // Output: 3
+    std::cout << "Min element index: " << minIndex << "\n";  // Output: 4
+}
+```
