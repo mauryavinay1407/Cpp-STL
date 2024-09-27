@@ -250,8 +250,7 @@ Examples :
 ```
 
 12\. `std::distance`
-
----------------------------------------------
+--------------------
 
 These functions help find the iterator to the maximum or minimum element in a container. You can then use `std::distance` to calculate the index of these elements.
 
