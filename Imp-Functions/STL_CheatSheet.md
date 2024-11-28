@@ -280,3 +280,27 @@ int main() {
     std::cout << "Min element index: " << minIndex << "\n";  // Output: 4
 }
 ```
+
+13\. `std::iota`
+--------------------
+
+The `iota` function fills a range with successive values, starting from a given value.
+
+#### Syntax
+
+```c++
+void iota(ForwardIterator first, ForwardIterator last, T value);
+```
+* `first`, `last`: The range of elements to fill.
+* `value`:         The initial value to start from.
+
+#### Example
+
+```c++
+vector<int> nums(5);
+std::iota(nums.begin(), nums.end(), 1);
+
+for (int n : nums) {
+    std::cout << n << " ";  // Output: 1 2 3 4 5
+}
+```
